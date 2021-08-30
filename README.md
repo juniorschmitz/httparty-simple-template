@@ -1,6 +1,6 @@
 # HTParty Automated Tests Template
 
-[![CI](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml/badge.svg)](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml)
+[![CI](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml)
 
 A simple template created for implementing automated tests focusing on API using HTTParty as the REST client.
 
