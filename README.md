@@ -1,8 +1,14 @@
-# HTParty Automated Tests Template
+# HTTParty Automated Tests Template
 
 [![CI](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml/badge.svg)](https://github.com/juniorschmitz/httparty-simple-template/actions/workflows/main.yml)
 
 A simple template created for implementing automated tests focusing on API using HTTParty as the REST client.
+
+For running the project locally, one should have Ruby 2.7.x+ version installed, and run the commands:
+```
+bundle install
+bundle exec cucumber -p default
+```
 
 The documentation for the tested API can be found at: https://serverest.dev
 
@@ -19,7 +25,6 @@ It uses exclusive send methods from Ruby for reusing steps with more powerful im
 Some of the main capabilities of the framework are:
 - Generic and Dynamic data generation using Faker for the automated tests;
 - Utilities for logging the infos from and to applications;
-- Easy to understand implementation using the Excon client for making HTTP calls;
 - Easy to use Features/Steps/Hooks for implementing new scenarios or migrating and creating new tests for any kind of REST APIs;
 - Contract tests using Json Schema validators;
 
