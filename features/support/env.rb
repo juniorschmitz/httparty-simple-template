@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cucumber'
 require 'httparty'
 require 'faker'
@@ -9,7 +11,7 @@ require 'os'
 require 'json-schema'
 require 'jsonpath'
 
-ENVIRONMENT = ENV["ENVIRONMENT"]
+ENVIRONMENT = ENV['ENVIRONMENT']
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENVIRONMENT}.yaml"))
 
-$base_uri = CONFIG["uri"]
+$base_uri = CONFIG['uri']

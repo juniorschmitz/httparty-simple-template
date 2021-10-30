@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker'
 
 module Factory
@@ -6,16 +8,16 @@ module Factory
       {
         nome: Faker::Name.first_name,
         email: Faker::Internet.email,
-        password: "1234",
-        administrador: "true"
+        password: '1234',
+        administrador: 'true'
       }
     end
 
     def self.valid_product
       {
         nome: Faker::Name.first_name,
-        preco: "999999999",
-        descricao: "Este é um produto válido",
+        preco: '999999999',
+        descricao: 'Este é um produto válido',
         quantidade: 500
       }
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Before do
   @params = ''
   @serverest_api = ServeRest.new
