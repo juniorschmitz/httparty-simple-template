@@ -4,6 +4,16 @@
 
 A simple template created for implementing automated tests focusing on API using HTTParty as the REST client.
 
+For running the Rubocop linter:
+```
+rubocop
+```
+
+For running the Rubocop linter and auto-fixing issues:
+```
+rubocop -A
+```
+
 For running the project locally, one should have Ruby 2.7.x+ version installed, and run the commands:
 ```
 bundle install
