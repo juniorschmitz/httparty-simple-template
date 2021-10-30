@@ -2,7 +2,7 @@ Dado("que possua um payload de usuário válido") do
   @body = Factory::Dynamic::valid_user
 end
 
-E("deverá retornar uma lista de usuários") do
+Então("deverá retornar uma lista de usuários") do
   @parsed_response_body = JSON.parse(@response.body)
   expect(@parsed_response_body["usuarios"].size).to be > 1
   expect(@parsed_response_body["usuarios"].class).to be_a_kind_of(Array.class)
@@ -24,7 +24,7 @@ Dado("que possua um id de usuário inválido") do
   @params += "/umIdQueNaoExiste"
 end
 
-E("o usuário não deverá mais existir na base") do
+Então("o usuário não deverá mais existir na base") do
   steps %{
     Quando chamar o endpoint "/usuarios" com o método "get" com parâmetros
     Então deverá retornar o status code 400
@@ -32,7 +32,7 @@ E("o usuário não deverá mais existir na base") do
   }
 end
 
-E("deverá alterar o usuário criado previamente") do
+Então("deverá alterar o usuário criado previamente") do
   steps %{
     Quando chamar o endpoint "/usuarios" com o método "get" com parâmetros
   }
@@ -41,7 +41,7 @@ E("deverá alterar o usuário criado previamente") do
   expect(@parsed_response_body["email"]).to eql @body[:email]
 end
 
-E("deverá retornar um único usuário") do
+Então("deverá retornar um único usuário") do
   @parsed_response_body = JSON.parse(@response.body)
   expect(@parsed_response_body["usuarios"]).to be nil
   expect(@parsed_response_body["nome"]).not_to be nil
@@ -56,7 +56,7 @@ Dado('que tenha removido o campo {string}') do |field|
   @body.delete(field.to_sym)
 end
 
-E("deverá retornar uma mensagem informando que o campo {string} é obrigatório") do |field|
+Então("deverá retornar uma mensagem informando que o campo {string} é obrigatório") do |field|
   @parsed_response_body = JSON.parse(@response.body)
   expect(@parsed_response_body[field]).to eql "#{field} é obrigatório"
 end
